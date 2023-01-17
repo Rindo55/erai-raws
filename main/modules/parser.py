@@ -8,7 +8,7 @@ from main import queue
 from main.inline import button1
 
 def trim_title(title: str):
-    title = title.replace("[Erai-raws]","")
+    title = title.replace("[Magnet]","")
     return title
 
 def parse():
