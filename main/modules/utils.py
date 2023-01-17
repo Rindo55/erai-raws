@@ -89,7 +89,7 @@ async def status_text(text):
     
     queue_text = ""
     for i in queue:
-        queue_text += "📌 " + i["title"].replace(".mkv","").replace(".mp4","").strip() + "\n"
+        queue_text += "📌 " + i["title"]+ "\n"
 
     if queue_text == "":
         queue_text = "Nothing to encode here uwu"
