@@ -19,7 +19,7 @@ def parse():
     for i in b:
         item = {}
         item['title'] = i['title']
-        item['size'] = i['nyaa_size']
+        item['size'] = i['erai_size']
         item['link'] = i['link']
         data.append(item)
     data.reverse()
