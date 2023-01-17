@@ -8,7 +8,7 @@ from main import queue
 from main.inline import button1
 
 def trim_title(title: str):
-    title = title.replace("[Magnet]","")
+    title = title.replace("[Erai-raws]","")
     return title
 
 def parse():
@@ -18,8 +18,8 @@ def parse():
 
     for i in b:
         item = {}
-        item['title'] = trim_title(i['title'])
-        item['size'] = i['erai_size']
+        item['title'] = i['title']
+        item['size'] = i['nyaa_size']
         item['link'] = i['link']
         data.append(item)
     data.reverse()
