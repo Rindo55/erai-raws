@@ -8,18 +8,18 @@ from main import queue
 from main.inline import button1
 
 def trim_title(title: str):
-    title = title.replace("[Magnet]","")
+    title = title.replace("[Erai-raws]","")
     return title
 
 def parse():
-    a = feedparser.parse("https://www.erai-raws.info/episodes/feed/?res=SD&type=magnet&subs%5B0%5D=us&0879fd62733b8db8535eb1be24e23f6d")
+    a = feedparser.parse("https://nyaa.si/?page=rss&q=480p&c=0_0&f=0&u=erai-raws")
     b = a["entries"]
     data = []    
 
     for i in b:
         item = {}
-        item['title'] = i['title']
-        item['size'] = i['erai_size']
+        item['title'] = trim_title(i['title'])
+        item['size'] = i['nyaa_size']
         item['link'] = i['link']
         data.append(item)
     data.reverse()
