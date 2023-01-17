@@ -102,7 +102,7 @@ async def start_uploading(data):
 
         size = data["size"]
 
-        name = title
+        name = title + ".mkv"
 
         fpath = "downloads/" + name
 
