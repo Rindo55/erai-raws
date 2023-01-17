@@ -77,19 +77,16 @@ def tags_generator(title):
     while x[-1] == "_":
         x = x[:-1]
     return x
-
 async def status_text(text):
     stat = """
 ⭐️ **Status :** {}
-
 ⏳ **Queue :** 
-
 {}
 """
     
     queue_text = ""
     for i in queue:
-        queue_text += "📌 " + i["title"] + "\n"
+        queue_text += "📌 " + i["title"].replace(".mkv","").replace(".mp4","").strip() + "\n"
 
     if queue_text == "":
         queue_text = "Nothing to encode here uwu"
